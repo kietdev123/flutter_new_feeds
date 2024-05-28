@@ -36,10 +36,10 @@ class _StoryPageState extends State<StoryPage> {
   Widget build(BuildContext context) => PageView(
         controller: controller,
         children: users
-            .map((user) => StoryWidget(
-                  user: user,
-                  controller: controller,
-                ))
+            .map((user) =>StoryWidget(
+                      user: user,
+                      controller: controller,
+                    ),)
             .toList(),
       );
 }

@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/data/users.dart';
 import 'package:flutter_application_1/model/story.dart';
@@ -99,7 +101,7 @@ class _StoryWidgetState extends State<StoryWidget> {
               },
               onStoryShow: (storyItem, index) {
                 // final index = storyItems.indexOf(storyItem);
-
+          
                 if (index > 0) {
                   setState(() {
                     date = widget.user.stories[index].date;
@@ -112,42 +114,8 @@ class _StoryWidgetState extends State<StoryWidget> {
             user: widget.user,
             date: date,
           ),
-
-          // Positioned(
-          //     bottom: 0,
-          //     child: Container(
-          //       color: Colors.amber,
-          //       height: 30,
-          //       width: 200,
-          //     )),
-          Positioned(
-            bottom: 0,
-            width: 200,
-            height: 200,
-            child: Material(
-              type: MaterialType.transparency,
-              child: Container(
-                height: 50,
-                width: MediaQuery.of(context).size.width,
-                margin: EdgeInsets.symmetric(horizontal: 16, vertical: 56),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[
-                    TextField(),
-                    SizedBox(width: 16),
-                    Icon(
-                      Icons.audiotrack,
-                      color: Colors.green,
-                      size: 30.0,
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ),
-
-          // Positioned(bottom: 0, child: SizedBox(height: 30, width: 200,child: CommentWidget()))
+          CommentWidget(),
+         
         ],
       );
 }
