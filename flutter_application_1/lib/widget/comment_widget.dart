@@ -18,7 +18,7 @@ class _CommentWidgetState extends State<CommentWidget> {
    Material(
         type: MaterialType.transparency,
         child: Container(
-          margin: EdgeInsets.fromLTRB(16, isKeyBoardUp ? MediaQuery.of(context).size.height * 0.3 :  MediaQuery.of(context).size.height * 0.9 , 16, 0),
+          margin: EdgeInsets.fromLTRB(16, isKeyBoardUp ? (MediaQuery.of(context).size.height - MediaQuery.of(context).viewInsets.bottom - 60)   :  MediaQuery.of(context).size.height * 0.9 , 16, 0),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
