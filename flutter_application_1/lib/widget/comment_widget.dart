@@ -12,12 +12,15 @@ class CommentWidget extends StatefulWidget {
 class _CommentWidgetState extends State<CommentWidget> {
    final commentController = TextEditingController();
   @override
-  Widget build(BuildContext context) => Material(
+  Widget build(BuildContext context) {
+    bool isKeyBoardUp = MediaQuery.of(context).viewInsets.bottom > 0;
+    return 
+   Material(
         type: MaterialType.transparency,
         child: Container(
-          margin: EdgeInsets.fromLTRB(16, MediaQuery.of(context).size.height * 0.7 , 16, 0),
+          margin: EdgeInsets.fromLTRB(16, isKeyBoardUp ? MediaQuery.of(context).size.height * 0.3 :  MediaQuery.of(context).size.height * 0.9 , 16, 0),
           child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               SizedBox(
@@ -31,12 +34,12 @@ class _CommentWidgetState extends State<CommentWidget> {
               ),
               SizedBox(width: 16),
               Icon(
-                Icons.audiotrack,
-                color: Colors.green,
+                Icons.heart_broken,
+                color: Colors.white,
                 size: 30.0,
               ),
             ],
           ),
         ),
-      );
+      );}
 }

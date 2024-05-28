@@ -32,26 +32,29 @@ class CustomTextField extends StatelessWidget {
         keyboardType: inputType,
         textAlign: TextAlign.start,
         style: const TextStyle(
-          color: Colors.black,
+          color: Colors.white,
           fontSize: 16,
         ),
         decoration: InputDecoration(
+          filled: true,
+      fillColor: Colors.black,
+        
           prefixIcon: Icon(prefixIcon),
           isDense: true,
           labelText: name,
           counterText: "",
           labelStyle: const TextStyle(color: Colors.grey),
           border: const OutlineInputBorder(
-            borderSide: BorderSide(color: Colors.green),
-            borderRadius: BorderRadius.all(Radius.circular(10)),
+            // borderSide: BorderSide(color: Colors.green),
+            borderRadius: BorderRadius.all(Radius.circular(20)),
           ),
           focusedBorder: const OutlineInputBorder(
-            borderSide: BorderSide(color: Colors.green),
-            borderRadius: BorderRadius.all(Radius.circular(10)),
+            // borderSide: BorderSide(color: Colors.green),
+            borderRadius: BorderRadius.all(Radius.circular(20)),
           ),
           enabledBorder: const OutlineInputBorder(
-            borderSide: BorderSide(color: Colors.green),
-            borderRadius: BorderRadius.all(Radius.circular(10)),
+            // borderSide: BorderSide(color: Colors.green),
+            borderRadius: BorderRadius.all(Radius.circular(20)),
           ),
         ),
       ),
